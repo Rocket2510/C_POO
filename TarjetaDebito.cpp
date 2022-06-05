@@ -1,3 +1,4 @@
+//Desarrollado por Carrillo Garcia Edgar Javier
 #include <iostream>
 #include <stdlib.h>
 
@@ -9,7 +10,7 @@ class TarjetaDebito{
     public:
         TarjetaDebito(int saldo);
         int getSaldo();
-        void depositar(int saldo);
+        void depositar(int monto);
         bool retirar(int saldo);
 
 };
