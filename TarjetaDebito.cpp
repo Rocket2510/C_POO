@@ -1,4 +1,3 @@
-//Desarrollado por Carrillo Garcia Edgar Javier
 #include <iostream>
 #include <stdlib.h>
 
@@ -51,7 +50,7 @@ class TarjetaCredito : public TarjetaDebito{
     public:
         TarjetaCredito(int saldo,int Limite_Credito);
         int getLimite_Credito();
-        void cambiarLimite();
+        void setcambiarLimite(int);
 
 };
 
@@ -64,9 +63,10 @@ int TarjetaCredito::getLimite_Credito(){
     cout << "El limite de credito actual es de: $" << Limite_Credito << endl;
     return Limite_Credito;
 }
-void TarjetaCredito::cambiarLimite(){
+void TarjetaCredito::setcambiarLimite(int Limite_Credito){
+    this->Limite_Credito=Limite_Credito;
     cout << "El limite de credito ha cambiado" << endl;
-    cout << "El nuevo limite de credito es: $" << Limite_Credito << endl;
+    cout << "El nuevo limite de credito es de: $" << Limite_Credito << endl;
 }
 
 
@@ -86,4 +86,5 @@ Javier.getLimite_Credito();
 Javier.getSaldo();
 Javier.depositar(3000);
 Javier.retirar(5000);
+Javier.setcambiarLimite(20000);
 }
